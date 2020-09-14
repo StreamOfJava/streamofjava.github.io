@@ -7,6 +7,9 @@
     "twitch_handle": {
       "type": "string"
     },
+    "youtube_handle": {
+      "type": "string"
+    },
     "twitter_handle": {
       "type": "string"
     },
@@ -27,6 +30,16 @@
           "duration_in_minutes": {
             "type": "number"
           },
+          "platform": {
+            "type": "string",
+            "enum": [
+              "twitch",
+              "youtube"
+            ]
+          },
+          "stream_link": {
+            "type": "string"
+          },
           "recurring": {
             "type": "object",
             "properties": {
@@ -38,19 +51,33 @@
               }
             },
             "required": [
-              "is_recurring", "series_end"
+              "is_recurring",
+              "series_end"
             ]
           }
         },
         "required": [
-          "title", "start_date_utc", "duration_in_minutes"
+          "title",
+          "start_date_utc",
+          "duration_in_minutes",
+          "platform",
+          "stream_link"
         ]
       }
     }
   },
-  "required": [
-    "twitch_handle",
-    "twitter_handle",
-    "schedule"
+  "anyOf": [
+    {
+      "required": [
+        "twitch_handle",
+        "schedule"
+      ]
+    },
+    {
+      "required": [
+        "youtube_handle",
+        "schedule"
+      ]
+    }
   ]
 }
