@@ -8,7 +8,7 @@ It's a landing page for those of us who stream Java on Twitch and YouTube.
 
   - Ted Young (JitterTed): [Twitch](https://www.twitch.tv/jitterted) - [YouTube](https://www.youtube.com/channel/UCx8qMdZ6JoZgOcOQxWlyV8A) - [Twitter](https://twitter.com/jitterted)
   - Nicolai Parlog (nipafx): [Twitch](https://www.twitch.tv/nipafx) - [Twitter](https://twitter.com/nipafx)
-  - Kevin Wittek (Kiview): [Twitch](https://www.twitch.tv/kiview) - [Twitter](https://twitter.com/kiview
+  - Kevin Wittek (Kiview): [Twitch](https://www.twitch.tv/kiview) - [Twitter](https://twitter.com/kiview)
   - Matthew Gilliard: [Twitch](https://www.twitch.tv/MaximumGilliard) - [Twitter](https://twitter.com/MaximumGilliard)
   - Tim Zöller: [Twitch](https://www.twitch.tv/JavaHippie) - [Twitter](https://twitter.com/JavaHippie)
 
