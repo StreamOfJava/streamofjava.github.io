@@ -1,0 +1,56 @@
+{
+  "$id": "https://streamofjava.github.io/stream-definition.schema.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "description": "Information about the stream schedule of a Twitch channel",
+  "type": "object",
+  "properties": {
+    "twitch_handle": {
+      "type": "string"
+    },
+    "twitter_handle": {
+      "type": "string"
+    },
+    "streamer_timezone": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "start_date_utc": {
+            "type": "string"
+          },
+          "duration_in_minutes": {
+            "type": "number"
+          },
+          "recurring": {
+            "type": "object",
+            "properties": {
+              "is_recurring": {
+                "type": "boolean"
+              },
+              "series_end": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "is_recurring", "series_end"
+            ]
+          }
+        },
+        "required": [
+          "title", "start_date_utc", "duration_in_minutes"
+        ]
+      }
+    }
+  },
+  "required": [
+    "twitch_handle",
+    "twitter_handle",
+    "schedule"
+  ]
+}
