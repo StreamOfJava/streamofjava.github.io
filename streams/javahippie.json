@@ -6,14 +6,12 @@
   "schedule": [
     {
       "title": "BreakPoint - Functional Friday Lunch Break",
+      "description": "Learning how to build web apps with clojure, one lunch at a time",
       "start_date_utc": "2020-08-28T10:30",
       "duration_in_minutes": 30,
       "platform": "twitch",
-      "stream_link": "http://twitch.tv/javahippie",
-      "recurring": {
-        "is_recurring": true,
-        "series_end": "2020-12-31T22:00"
-      }
+      "stream_link": "http://twitch.tv/javahippie"
+
     },
     {
       "title": "Special Event xyz",
