@@ -24,6 +24,9 @@
           "title": {
             "type": "string"
           },
+          "description": {
+            "type": "string"
+          },
           "start_date_utc": {
             "type": "string"
           },
@@ -39,28 +42,11 @@
           },
           "stream_link": {
             "type": "string"
-          },
-          "recurring": {
-            "type": "object",
-            "properties": {
-              "is_recurring": {
-                "type": "boolean"
-              },
-              "series_end": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "is_recurring",
-              "series_end"
-            ]
           }
         },
         "required": [
           "title",
           "start_date_utc",
-          "duration_in_minutes",
-          "platform",
           "stream_link"
         ]
       }
