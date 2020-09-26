@@ -9,16 +9,21 @@
       "description": "Learning how to build web apps with clojure, one lunch at a time",
       "start_date_utc": "2020-08-28T10:30",
       "duration_in_minutes": 30,
-      "platform": "twitch",
-      "stream_link": "http://twitch.tv/javahippie"
-
+      "stream_links": [
+        {"platform": "twitch"}
+      ]
     },
     {
       "title": "Special Event xyz",
       "start_date_utc": "2020-09-28T22:30",
       "duration_in_minutes": 60,
-      "platform": "youtube",
-      "stream_link": "https://www.youtube.com/channel/UCFCaMBSbXWg1bfaQ0tUpA-w"
+      "stream_links": [
+      	{"platform": "twitch"},
+        {"platform": "youtube",
+         "url": "https://youtube.com/blarghblabla"}
+      ]
     }
   ]
 }
+
+
