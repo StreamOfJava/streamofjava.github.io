@@ -1,0 +1,84 @@
+{
+	"$id": "https://streamofjava.github.io/stream-definition.schema.json",
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+	"description": "Information about the stream schedule of a Twitch or YouTube channel",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"color": {
+			"type": "string",
+			"regex": "^#[0-9,a-f,A-F]{3}$|^#[0-9,a-f,A-F]{6}$"
+		},
+		"twitch_handle": {
+			"type": "string"
+		},
+		"youtube_url": {
+			"type": "string",
+			"format": "uri"
+		},
+		"schedule": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"title": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"start_time": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"duration_in_minutes": {
+						"type": "number"
+					},
+					"stream_links": {
+						"type": "array",
+						"items": {
+							"platform": {
+								"type": "string",
+								"enum": [
+									"twitch",
+									"youtube"
+								]
+							},
+							"url": {
+								"type": "string"
+							},
+							"required": [
+								"platform"
+							]
+						}
+					}
+				},
+				"required": [
+					"title",
+					"stream_links",
+					"start_time"
+				]
+			}
+		}
+	},
+	"anyOf": [
+		{
+			"required": [
+				"name",
+				"color",
+				"twitch_handle",
+				"schedule"
+			]
+		},
+		{
+			"required": [
+				"name",
+				"color",
+				"youtube_url",
+				"schedule"
+			]
+		}
+	]
+}
