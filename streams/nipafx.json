@@ -1,0 +1,90 @@
+{
+	"name": "Nicolai (nipafx)",
+	"color": "#69EA7D",
+	"twitch_handle": "nipafx",
+	"youtube_url": "https://www.youtube.com/channel/UCngKKOnBxYtLAV8pgUBNDng",
+	"schedule": [
+		{
+			"start_time": "2021-05-04T17:00:00Z",
+			"title": "To Jupiter and Beyond",
+			"description": "Working on PRs, issues, and maybe new extensions",
+			"stream_links": [
+				{
+					"platform": "twitch"
+				}
+			]
+		},
+		{
+			"start_time": "2021-05-09T07:00:00Z",
+			"title": "nipafx.dev // GatsbyJS",
+			"description": "Polishing Nicolai's website",
+			"stream_links": [
+				{
+					"platform": "twitch"
+				}
+			]
+		},
+		{
+			"start_time": "2021-05-11T17:00:00Z",
+			"title": "Java Ecosystem Map",
+			"description": "I want to create a map of the Java ecosystem, but I'm not sure yet, what that's gonna look like. Let's explore the idea together!",
+			"stream_links": [
+				{
+					"platform": "twitch"
+				}
+			]
+		},
+		{
+			"start_time": "2021-05-18T17:00:00Z",
+			"title": "To Jupiter and Beyond",
+			"description": "Working on PRs, issues, and maybe new extensions",
+			"stream_links": [
+				{
+					"platform": "twitch"
+				}
+			]
+		},
+		{
+			"start_time": "2021-05-25T17:00:00Z",
+			"title": "Extending ModiTect // Gunnar Morling",
+			"description": "We'll continue our efforts to teach Moditect the creation of application class-path images",
+			"stream_links": [
+				{
+					"platform": "twitch"
+				}
+			]
+		},
+		{
+			"start_time": "2021-05-29T07:00:00Z",
+			"title": "Hack.Commit.Push",
+			"description": "Helping you help us. Join [Hack.Commit.Push](https://paris2021.hack-commit-pu.sh/) if you want to hack on JUnit Pioneer and we'll support you all the way from learning about Jupiter's extension API to merging your PR.<br/>I'll live-stream on Twitch.",
+			"stream_links": [
+				{
+					"platform": "twitch"
+				}
+			]
+		},
+		{
+			"start_time": "2021-06-29T17:00:00Z",
+			"title": "Gunnar Morling",
+			"description": "We had so much fun with Moditect, we're gonna keep streaming together",
+			"stream_links": [
+				{
+					"platform": "twitch"
+				}
+			]
+		},
+		{
+			"start_time": "2021-07-27T17:00:00Z",
+			"title": "Gunnar Morling",
+			"description": "We had so much fun with Moditect, we're gonna keep streaming together",
+			"stream_links": [
+				{
+					"platform": "twitch"
+				}
+			]
+		}
+	]
+}
+
+
