@@ -8,3 +8,5 @@
 
 /content/code/*
 /content/drafts/*
+
+src/react-app-env.d.ts
