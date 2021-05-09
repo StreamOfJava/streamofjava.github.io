@@ -1,0 +1,10 @@
+/.idea/*
+/.vscode/*
+/.netlify/*
+/.cache/*
+/build/*
+/node_modules/*
+/public/*
+
+/content/code/*
+/content/drafts/*
