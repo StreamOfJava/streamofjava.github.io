@@ -14,9 +14,6 @@
 		"youtube_handle": {
 			"type": "string"
 		},
-		"twitter_handle": {
-			"type": "string"
-		},
 		"streamer_timezone": {
 			"type": "string"
 		},
