@@ -2,12 +2,11 @@
 	"color": "#01FFFF",
 	"twitch_handle": "javahippie",
 	"youtube_handle": "javahippie",
-	"streamer_timezone": "CEST",
 	"schedule": [
 		{
 			"title": "BreakPoint - Functional Friday Lunch Break",
 			"description": "Learning how to build web apps with clojure, one lunch at a time",
-			"start_date_utc": "2020-08-28T10:30",
+			"start_time": "2021-05-21T10:30:00+02:00",
 			"duration_in_minutes": 30,
 			"stream_links": [
 				{
@@ -17,7 +16,7 @@
 		},
 		{
 			"title": "Special Event xyz",
-			"start_date_utc": "2020-09-28T22:30",
+			"start_time": "2021-05-28T22:30:00+02:00",
 			"duration_in_minutes": 60,
 			"stream_links": [
 				{

@@ -14,9 +14,6 @@
 		"youtube_handle": {
 			"type": "string"
 		},
-		"streamer_timezone": {
-			"type": "string"
-		},
 		"schedule": {
 			"type": "array",
 			"items": {
@@ -28,8 +25,9 @@
 					"description": {
 						"type": "string"
 					},
-					"start_date_utc": {
-						"type": "string"
+					"start_time": {
+						"type": "string",
+						"format": "date-time"
 					},
 					"duration_in_minutes": {
 						"type": "number"
@@ -56,7 +54,7 @@
 				"required": [
 					"title",
 					"stream_links",
-					"start_date_utc"
+					"start_time"
 				]
 			}
 		}
