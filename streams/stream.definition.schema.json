@@ -11,8 +11,9 @@
 		"twitch_handle": {
 			"type": "string"
 		},
-		"youtube_handle": {
-			"type": "string"
+		"youtube_url": {
+			"type": "string",
+			"format": "uri"
 		},
 		"schedule": {
 			"type": "array",
@@ -70,7 +71,7 @@
 		{
 			"required": [
 				"color",
-				"youtube_handle",
+				"youtube_url",
 				"schedule"
 			]
 		}
