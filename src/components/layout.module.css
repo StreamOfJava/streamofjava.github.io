@@ -1,0 +1,8 @@
+.main {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+}
+
+.main > * {
+    grid-column: 2 / span 1;
+}
