@@ -1,29 +1,35 @@
 {
-  "twitch_handle": "javahippie",
-  "youtube_handle": "javahippie",
-  "twitter_handle": "javahippie",
-  "streamer_timezone": "CEST",
-  "schedule": [
-    {
-      "title": "BreakPoint - Functional Friday Lunch Break",
-      "description": "Learning how to build web apps with clojure, one lunch at a time",
-      "start_date_utc": "2020-08-28T10:30",
-      "duration_in_minutes": 30,
-      "stream_links": [
-        {"platform": "twitch"}
-      ]
-    },
-    {
-      "title": "Special Event xyz",
-      "start_date_utc": "2020-09-28T22:30",
-      "duration_in_minutes": 60,
-      "stream_links": [
-      	{"platform": "twitch"},
-        {"platform": "youtube",
-         "url": "https://youtube.com/blarghblabla"}
-      ]
-    }
-  ]
+	"twitch_handle": "javahippie",
+	"youtube_handle": "javahippie",
+	"twitter_handle": "javahippie",
+	"streamer_timezone": "CEST",
+	"schedule": [
+		{
+			"title": "BreakPoint - Functional Friday Lunch Break",
+			"description": "Learning how to build web apps with clojure, one lunch at a time",
+			"start_date_utc": "2020-08-28T10:30",
+			"duration_in_minutes": 30,
+			"stream_links": [
+				{
+					"platform": "twitch"
+				}
+			]
+		},
+		{
+			"title": "Special Event xyz",
+			"start_date_utc": "2020-09-28T22:30",
+			"duration_in_minutes": 60,
+			"stream_links": [
+				{
+					"platform": "twitch"
+				},
+				{
+					"platform": "youtube",
+					"url": "https://youtube.com/blarghblabla"
+				}
+			]
+		}
+	]
 }
 
 
