@@ -4,6 +4,9 @@
 	"description": "Information about the stream schedule of a Twitch or YouTube channel",
 	"type": "object",
 	"properties": {
+		"name": {
+			"type": "string"
+		},
 		"color": {
 			"type": "string",
 			"regex": "^#[0-9,a-f,A-F]{3}$|^#[0-9,a-f,A-F]{6}$"
@@ -63,6 +66,7 @@
 	"anyOf": [
 		{
 			"required": [
+				"name",
 				"color",
 				"twitch_handle",
 				"schedule"
@@ -70,6 +74,7 @@
 		},
 		{
 			"required": [
+				"name",
 				"color",
 				"youtube_url",
 				"schedule"
