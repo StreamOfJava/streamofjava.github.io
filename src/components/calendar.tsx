@@ -1,6 +1,7 @@
 import * as React from "react"
 import { DateTime, IANAZone } from "luxon"
 
+import { Schedule } from "../types"
 import { arrayTo } from "./functions"
 import CalendarSheet from "./calendarSheet"
 
@@ -9,24 +10,31 @@ const style = require("./calendar.module.css")
 interface CalendarProperties {
 	className: string
 	timeZone: IANAZone
+	schedule: Schedule
 }
 
-const Calendar = ({ className, timeZone }: CalendarProperties) => {
+const Calendar = ({ className, timeZone, schedule }: CalendarProperties) => {
 	const today: DateTime = DateTime.now().setZone(timeZone)
-	const firstDay: DateTime = today.set({ day: 1 })
+	const firstDay: DateTime = today.startOf("month")
 	const daysInMonth: number = firstDay.daysInMonth
 	return (
 		<div
 			className={style.container + " " + className}
-			style={{
-				gridTemplateAreas: gridStyle(firstDay, daysInMonth),
-			}}
+			style={{ gridTemplateAreas: gridStyle(firstDay, daysInMonth) }}
 		>
 			{arrayTo(daysInMonth)
-				.map(day => day + 1)
-				.map(day => (
-					<CalendarSheet key={day} day={firstDay.set({ day })} gridArea={`d${day}`} />
-				))}
+				.map(index => index + 1)
+				.map(dayOfMonth => {
+					const day: DateTime = firstDay.set({ day: dayOfMonth })
+					return (
+						<CalendarSheet
+							key={dayOfMonth}
+							day={day}
+							streams={schedule.streamsOn(day)}
+							gridArea={`d${dayOfMonth}`}
+						/>
+					)
+				})}
 		</div>
 	)
 }

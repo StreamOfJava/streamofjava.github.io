@@ -5,8 +5,6 @@ module.exports = {
 		author: `Nicolai (nipafx)`,
 	},
 	plugins: [
-		`gatsby-plugin-react-helmet`,
-		`gatsby-plugin-image`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -14,8 +12,19 @@ module.exports = {
 				path: `${__dirname}/src/images`,
 			},
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `streams`,
+				path: `${__dirname}/streams`,
+				ignore: [`**/*.schema.json`]
+			},
+		},
+		`gatsby-transformer-json`,
 		`gatsby-transformer-sharp`,
+		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
+		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
