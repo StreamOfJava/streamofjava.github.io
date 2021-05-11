@@ -4,13 +4,11 @@ import "./global.css"
 const layoutStyle = require("./layout.module.css")
 
 interface LayoutProperties {
-    children: any
+	children: any
 }
 
 const Layout = ({ children }: LayoutProperties) => (
-    <main className={layoutStyle.main}>
-        {children}
-    </main>
+	<main className={layoutStyle.main}>{children}</main>
 )
 
 export default Layout
