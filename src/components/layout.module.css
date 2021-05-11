@@ -1,6 +1,22 @@
 .main {
 	display: grid;
-	grid-template-columns: 1fr 600px 1fr;
+	grid-template-columns: 1fr auto 300px 1fr;
+	grid-template-areas:
+		'. header   header  .'
+		'. calendar sidebar .'
+	;
+}
+
+.header {
+	grid-area: "header";
+}
+
+.calendar {
+	grid-area: "calendar";
+}
+
+.sidebar {
+	grid-area: "sidebar";
 }
 
 .main > * {

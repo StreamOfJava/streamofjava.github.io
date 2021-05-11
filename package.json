@@ -5,6 +5,7 @@
 	"version": "0.1.0",
 	"author": "Kyle Mathews <mathews.kyle@gmail.com>",
 	"dependencies": {
+		"@types/luxon": "^1.26.5",
 		"@types/react": "^17.0.5",
 		"@types/react-dom": "^17.0.3",
 		"gatsby": "^3.4.1",
@@ -17,6 +18,7 @@
 		"gatsby-plugin-typescript": "^3.4.0",
 		"gatsby-source-filesystem": "^3.4.0",
 		"gatsby-transformer-sharp": "^3.4.0",
+		"luxon": "^1.26.0",
 		"prop-types": "^15.7.2",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",

@@ -1,0 +1,22 @@
+.container {
+	display: flex;
+	flex-direction: column;
+
+	border: 1px solid var(--fg-color);
+}
+
+.header {
+	padding: 0.25em 0.5em;
+
+	color: var(--bg-color);
+	background-color: var(--fg-color);
+	font-weight: bold;
+}
+
+.weekday::after {
+	content: ", ";
+}
+
+.body {
+	min-height: 1em;
+}
