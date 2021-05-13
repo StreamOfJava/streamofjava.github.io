@@ -20,6 +20,9 @@
 }
 
 .locations {
+	display: flex;
+	flex-direction: column;
+
 	padding: 0.25em;
 	padding-left: 0;
 }

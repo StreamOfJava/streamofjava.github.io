@@ -1,0 +1,22 @@
+.badge {
+	padding: 0.1em 0.25em;
+
+	color: var(--fg-color);
+	background-color: var(--color);
+}
+
+.badge:visited {
+	color: var(--fg-color);
+}
+
+.badge:hover {
+	color: lighten(--color, 20%);
+}
+
+.youtube {
+	--color: #da281e;
+}
+
+.twitch {
+	--color: #a970ff;
+}

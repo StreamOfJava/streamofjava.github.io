@@ -26,3 +26,20 @@ export enum Platform {
 	Twitch,
 	YouTube,
 }
+
+export enum FontAwesomeIcon {
+	Discord,
+	FacebookF,
+	Github,
+	HackerNews,
+	LinkedinIn,
+	MediumM,
+	RedditAlien,
+	Rss,
+	StackOverflow,
+	Twitch,
+	Twitter,
+	Vk,
+	YouTube,
+	Xing,
+}
