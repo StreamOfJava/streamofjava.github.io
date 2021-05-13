@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { DateTime, IANAZone } from "luxon"
 
-import { Stream, Schedule } from "../types"
+import { Stream, Schedule, Location, Platform } from "../types"
 import Layout from "../components/layout"
 import Calendar from "../components/calendar"
 
@@ -24,12 +24,37 @@ const IndexPage = ({ data }: IndexProperties) => {
 	)
 }
 
-const readSchedule = (streamerData: any): Schedule => {
-	const streams: Stream[] = streamerData
-		.flatMap((streamer: any) => streamer.schedule)
-		.map((stream: any) => ({ startTime: DateTime.fromISO(stream.start_time) } as Stream))
-	streams.sort((left: Stream, right: Stream) => left.startTime.toMillis() - right.startTime.toMillis())
+const readSchedule = (streamers: any): Schedule => {
+	const streams: Stream[] = streamers.flatMap((streamer: any) =>
+		streamer.schedule.map((stream: any) => readStream(streamer, stream))
+	)
+	streams.sort(
+		(left: Stream, right: Stream) => left.startTime.toMillis() - right.startTime.toMillis()
+	)
 	return new ArraySchedule(streams)
+}
+
+const readStream = (streamer: any, stream: any): Stream => ({
+	title: stream.title,
+	startTime: DateTime.fromISO(stream.start_time),
+	locations: stream.stream_links.map((streamLink: any) => readLocation(streamer, streamLink)),
+	color: streamer.color,
+})
+
+const readLocation = (streamer: any, streamLink: any): Location => {
+	switch (streamLink.platform) {
+		case `twitch`:
+			return {
+				platform: Platform.Twitch,
+				url: new URL(streamLink.url ?? `https://twitch.tv/${streamer.twitch_handle}`),
+			}
+		case `youtube`:
+			return {
+				platform: Platform.YouTube,
+				url: new URL(streamLink.url ?? streamer.youtube_url),
+			}
+	}
+	throw new Error(`Unknown streaming platform "${streamLink.platform}"`)
 }
 
 class ArraySchedule implements Schedule {

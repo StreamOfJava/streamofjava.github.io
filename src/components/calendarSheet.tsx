@@ -3,6 +3,7 @@ import { DateTime } from "luxon"
 
 import { ordinalDay } from "./functions"
 import { Stream } from "../types"
+import CalendarEntry from "./calendarEntry"
 
 const style = require("./calendarSheet.module.css")
 
@@ -20,15 +21,10 @@ const CalendarSheet = ({ day, streams, gridArea }: SheetProperties) => {
 				<span className={style.day}>{ordinalDay(day.day)}</span>
 			</div>
 			<div className={style.body}>
-				{streams.map(displayStream)}
+				{streams.map(stream => <CalendarEntry key={stream.startTime.toISO()} stream={stream} />)}
 			</div>
 		</div>
 	)
-}
-
-const displayStream = (stream: Stream) => {
-	// TODO display something useful
-	return <span key={stream.startTime.toMillis()}>stream</span>
 }
 
 export default CalendarSheet

@@ -1,0 +1,25 @@
+.entry {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	margin: 0.5em;
+
+	--streamer-color: white;
+	border: 1px solid var(--streamer-color);
+}
+
+.time {
+	padding: 0.25em;
+
+	font-weight: bold;
+	color: var(--bg-color);
+	background-color: var(--streamer-color);
+}
+
+.title {
+	padding: 0.25em;
+}
+
+.locations {
+	padding: 0.25em;
+	padding-left: 0;
+}
