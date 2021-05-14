@@ -5,6 +5,9 @@
 
 	--streamer-color: white;
 	border: 1px solid var(--streamer-color);
+	border-bottom-right-radius: var(--border-radius);
+
+	font-size: var(--small-font-size);
 }
 
 .time {
@@ -17,12 +20,13 @@
 
 .title {
 	padding: 0.25em;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .locations {
 	display: flex;
-	flex-direction: column;
-
-	padding: 0.25em;
-	padding-left: 0;
+	flex-direction: row;
 }

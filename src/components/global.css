@@ -1,9 +1,27 @@
 body {
 	font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-	--bg-color: black;
-	--fg-color: white;
+	--bg-color: #0E0E10;
+	--fg-color: #EFEFF1;
 
 	background-color: var(--bg-color);
 	color: var(--fg-color);
+
+	--largest-font-size: 24px;
+	--large-font-size: 20px;
+	--regular-font-size: 16px;
+	--small-font-size: 14px;
+	--smallest-font-size: 12px;
+
+	font-size: var(--regular-font-size);
+
+	--border-radius: 0.5em;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 32px;
 }

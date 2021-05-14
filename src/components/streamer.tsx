@@ -15,6 +15,7 @@ const StreamerView = ({ streamer }: StreamerViewProperties) => {
 	return (
 		<span className={style.streamer} style={streamerStyle}>
 			<span className={style.name}>{streamer.name}</span>
+			<span className={style.divider} />
 			<span className={style.channels}>{streamer.channels.map(channel => <LocationView location={channel} />)}</span>
 		</span>
 	)

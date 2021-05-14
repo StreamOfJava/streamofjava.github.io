@@ -4,11 +4,11 @@ import { DateTime, IANAZone } from "luxon"
 
 import { Stream, Schedule, Location, Platform, Streamer } from "../types"
 import Layout from "../components/layout"
-import Streamers from "../components/streamers"
 import Header from "../components/header"
 import Calendar from "../components/calendar"
+import Streamers from "../components/streamers"
 
-const layoutStyle = require("../components/layout.module.css")
+const layout = require("../components/layout.module.css")
 
 interface IndexProperties {
 	data: any
@@ -17,19 +17,26 @@ interface IndexProperties {
 const IndexPage = ({ data }: IndexProperties) => {
 	return (
 		<Layout>
-			<Header />
-			<Streamers streamers={readStreamers(data.streamers.nodes)} />
-			<Calendar
-				className={layoutStyle.calendar}
-				timeZone={IANAZone.create("UTC")}
-				schedule={readSchedule(data.streamers.nodes)}
-			/>
+			<div className={layout.header}>
+				<Header />
+			</div>
+			<div className={layout.calendar}>
+				<Calendar
+					timeZone={IANAZone.create("UTC")}
+					schedule={readSchedule(data.streamers.nodes)}
+				/>
+			</div>
+			<div className={layout.sidebar}>
+				<Streamers streamers={readStreamers(data.streamers.nodes)} />
+			</div>
 		</Layout>
 	)
 }
 
 const readStreamers = (streamers: any): Streamer[] => {
-	return streamers.map(readStreamer)
+	const parsed: Streamer[] = streamers.map(readStreamer)
+	parsed.sort((left, right) => left.name.localeCompare(right.name))
+	return parsed
 }
 
 const readStreamer = (streamer: any): Streamer => {

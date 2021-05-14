@@ -1,8 +1,7 @@
 .container {
 	display: flex;
 	flex-direction: column;
-
-	border: 1px solid var(--fg-color);
+	justify-items: stretch;
 }
 
 .header {
@@ -11,6 +10,8 @@
 	color: var(--bg-color);
 	background-color: var(--fg-color);
 	font-weight: bold;
+
+	border-top-left-radius: var(--border-radius);
 }
 
 .weekday::after {
@@ -18,5 +19,8 @@
 }
 
 .body {
-	min-height: 1em;
+	flex-grow: 1;
+
+	border: 1px solid var(--fg-color);
+	border-bottom-right-radius: var(--border-radius);
 }

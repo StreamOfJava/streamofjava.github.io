@@ -1,6 +1,11 @@
-.container {
+.calendar {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	grid-gap: 10px;
+	grid-auto-rows: 1fr;
+	grid-gap: 1em;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
 }

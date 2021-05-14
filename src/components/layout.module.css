@@ -1,24 +1,20 @@
 .main {
 	display: grid;
-	grid-template-columns: 1fr auto 300px 1fr;
+	grid-template-columns: 1fr 2em auto 20em 2em 1fr;
 	grid-template-areas:
-		'. header   header  .'
-		'. calendar sidebar .'
+		'. . header   header  . .'
+		'. . calendar sidebar . .'
 	;
 }
 
 .header {
-	grid-area: "header";
+	grid-area: header;
 }
 
 .calendar {
-	grid-area: "calendar";
+	grid-area: calendar;
 }
 
 .sidebar {
-	grid-area: "sidebar";
-}
-
-.main > * {
-	grid-column: 2 / span 1;
+	grid-area: sidebar;
 }

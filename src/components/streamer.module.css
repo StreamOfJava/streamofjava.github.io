@@ -1,12 +1,34 @@
 .streamer {
+	display: flex;
+	flex-direction: row;
+
 	--streamer-color: white;
 	padding: 0.25em 0.25em 0.25em 0.5em;
 	border: 1px solid var(--streamer-color);
+	border-top-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
 
 	font-size: var(--large-font-size);
 	font-weight: bold;
 	color: var(--bg-color);
 	background-color:  var(--streamer-color);
+}
+
+.name {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.divider {
+	flex-grow: 1;
+}
+
+.channels {
+	flex-shrink: 0;
+
+	display: flex;
+	flex-direction: row;
 }
 
 .channels > * {

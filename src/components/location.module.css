@@ -1,8 +1,12 @@
 .badge {
-	padding: 0.1em 0.25em;
+	display: flex;
+	align-items: center;
+	padding: 0 0.25em;
 
 	color: var(--fg-color);
 	background-color: var(--color);
+
+	border: 1px solid var(--color);
 }
 
 .badge:visited {
@@ -10,7 +14,8 @@
 }
 
 .badge:hover {
-	color: lighten(--color, 20%);
+	color:  var(--color);
+	background-color: var(--bg-color);
 }
 
 .youtube {

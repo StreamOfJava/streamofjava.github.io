@@ -22,12 +22,9 @@ import { FontAwesomeIcon } from "../types"
 
 interface FaIconProperties {
 	icon: FontAwesomeIcon
-	className?: string
 }
 
-const FaIcon = ({ icon, className }: FaIconProperties) => (
-	<ReactFaIcon icon={iconForName(icon)} className={className} />
-)
+const FaIcon = ({ icon }: FaIconProperties) => <ReactFaIcon icon={iconForName(icon)} />
 
 // don't use a library (e.g. `library.add(fas, fab)`) because,
 // if the icons are referenced by string, they require JavaScript to show up;

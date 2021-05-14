@@ -3,13 +3,13 @@ import * as React from "react"
 import { FontAwesomeIcon, Location, Platform } from "../types"
 import FaIcon from "./faIcon"
 
-const style = require("./locationBadge.module.css")
+const style = require("./location.module.css")
 
-interface LocationProperties {
+interface LocationViewProperties {
 	location: Location
 }
 
-const LocationBadge = ({ location }: LocationProperties) => {
+const LocationView = ({ location }: LocationViewProperties) => {
 	const platformStyle = style[Platform[location.platform].toLowerCase()]
 	const classes: string = [style.badge, platformStyle].join(` `)
 	return (
@@ -28,4 +28,4 @@ const iconForPlatform = (platform: Platform): FontAwesomeIcon => {
 	}
 }
 
-export default LocationBadge
+export default LocationView

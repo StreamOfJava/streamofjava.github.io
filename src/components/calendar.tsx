@@ -8,18 +8,17 @@ import CalendarSheet from "./calendarSheet"
 const style = require("./calendar.module.css")
 
 interface CalendarProperties {
-	className: string
 	timeZone: IANAZone
 	schedule: Schedule
 }
 
-const Calendar = ({ className, timeZone, schedule }: CalendarProperties) => {
+const Calendar = ({ timeZone, schedule }: CalendarProperties) => {
 	const today: DateTime = DateTime.now().setZone(timeZone)
 	const firstDay: DateTime = today.startOf("month")
 	const daysInMonth: number = firstDay.daysInMonth
 	return (
 		<div
-			className={style.container + " " + className}
+			className={style.calendar}
 			style={{ gridTemplateAreas: gridStyle(firstDay, daysInMonth) }}
 		>
 			{arrayTo(daysInMonth)

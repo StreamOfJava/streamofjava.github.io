@@ -1,7 +1,7 @@
 import * as React from "react"
 
 import { Stream } from "../types"
-import LocationBadge from "./locationBadge"
+import LocationView from "./location"
 
 const style = require("./calendarEntry.module.css")
 
@@ -15,12 +15,12 @@ const CalendarEntry = ({ stream }: EntryProperties) => {
 	return (
 		<div className={style.entry} style={entryStyle}>
 			<span className={style.time}>{stream.startTime.toFormat("HH:mm")}</span>
-			<span className={style.title}>{stream.title}</span>
 			<span className={style.locations}>
 				{stream.locations.map(location => (
-					<LocationBadge key={location.url.toString()} location={location} />
-				))}
+					<LocationView key={location.url.toString()} location={location} />
+					))}
 			</span>
+			<span className={style.title}>{stream.title}</span>
 		</div>
 	)
 }
