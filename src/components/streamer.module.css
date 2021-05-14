@@ -1,0 +1,14 @@
+.streamer {
+	--streamer-color: white;
+	padding: 0.25em 0.25em 0.25em 0.5em;
+	border: 1px solid var(--streamer-color);
+
+	font-size: var(--large-font-size);
+	font-weight: bold;
+	color: var(--bg-color);
+	background-color:  var(--streamer-color);
+}
+
+.channels > * {
+	margin-left: 0.25em;
+}

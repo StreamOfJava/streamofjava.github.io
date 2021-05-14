@@ -2,8 +2,9 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { DateTime, IANAZone } from "luxon"
 
-import { Stream, Schedule, Location, Platform } from "../types"
+import { Stream, Schedule, Location, Platform, Streamer } from "../types"
 import Layout from "../components/layout"
+import Streamers from "../components/streamers"
 import Calendar from "../components/calendar"
 
 const layoutStyle = require("../components/layout.module.css")
@@ -15,6 +16,7 @@ interface IndexProperties {
 const IndexPage = ({ data }: IndexProperties) => {
 	return (
 		<Layout>
+			<Streamers streamers={readStreamers(data.streamers.nodes)} />
 			<Calendar
 				className={layoutStyle.calendar}
 				timeZone={IANAZone.create("UTC")}
@@ -22,6 +24,29 @@ const IndexPage = ({ data }: IndexProperties) => {
 			/>
 		</Layout>
 	)
+}
+
+const readStreamers = (streamers: any): Streamer[] => {
+	return streamers.map(readStreamer)
+}
+
+const readStreamer = (streamer: any): Streamer => {
+	const channels: Location[] = []
+	if (streamer.twitch_handle)
+		channels.push({
+			platform: Platform.Twitch,
+			url: new URL(`https://twitc.tv/${streamer.twitch_handle}`),
+		})
+	if (streamer.youtube_url)
+		channels.push({
+			platform: Platform.YouTube,
+			url: new URL(streamer.youtube_url),
+		})
+	return {
+		name: streamer.name,
+		color: streamer.color,
+		channels,
+	}
 }
 
 const readSchedule = (streamers: any): Schedule => {

@@ -3,7 +3,12 @@ import { DateTime } from "luxon";
 export interface Schedule {
 
 	streamsOn(day: DateTime): Stream[]
+}
 
+export interface Streamer {
+	name: string
+	color: string
+	channels: Location[]
 }
 
 export interface Stream {
