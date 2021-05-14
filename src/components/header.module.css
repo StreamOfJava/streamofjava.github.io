@@ -1,0 +1,12 @@
+.title {
+	text-align: center;
+}
+
+.intro {
+	font-size: var(--largest-font-size);
+	text-align: center;
+}
+
+.month {
+	text-align: center;
+}

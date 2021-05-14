@@ -5,6 +5,7 @@ import { DateTime, IANAZone } from "luxon"
 import { Stream, Schedule, Location, Platform, Streamer } from "../types"
 import Layout from "../components/layout"
 import Streamers from "../components/streamers"
+import Header from "../components/header"
 import Calendar from "../components/calendar"
 
 const layoutStyle = require("../components/layout.module.css")
@@ -16,6 +17,7 @@ interface IndexProperties {
 const IndexPage = ({ data }: IndexProperties) => {
 	return (
 		<Layout>
+			<Header />
 			<Streamers streamers={readStreamers(data.streamers.nodes)} />
 			<Calendar
 				className={layoutStyle.calendar}
