@@ -7,11 +7,11 @@ body {
 	background-color: var(--bg-color);
 	color: var(--fg-color);
 
-	--largest-font-size: 24px;
-	--large-font-size: 20px;
+	--largest-font-size: 32px;
+	--large-font-size: 24px;
 	--regular-font-size: 16px;
-	--small-font-size: 14px;
-	--smallest-font-size: 12px;
+	--small-font-size: 12px;
+	--smallest-font-size: 10px;
 
 	font-size: var(--regular-font-size);
 
@@ -19,9 +19,9 @@ body {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 64px;
 }
 
 h2 {
-	font-size: 32px;
+	font-size: 48px;
 }

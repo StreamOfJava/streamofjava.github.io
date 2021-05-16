@@ -8,7 +8,6 @@
 	border-top-left-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
 
-	font-size: var(--large-font-size);
 	font-weight: bold;
 	color: var(--bg-color);
 	background-color:  var(--streamer-color);

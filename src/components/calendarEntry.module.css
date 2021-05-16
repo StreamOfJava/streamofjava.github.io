@@ -1,6 +1,6 @@
 .entry {
 	display: grid;
-	grid-template-columns: auto 1fr auto;
+	grid-template-columns: auto auto 1fr;
 	margin: 0.5em;
 
 	--streamer-color: white;
