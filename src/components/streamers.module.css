@@ -1,9 +1,7 @@
 .container {
 	display: flex;
-	flex-direction: column;
-	margin-left: 1em;
-}
-
-.container > *:not(:last-child) {
-	margin-bottom: 0.5em;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
 }

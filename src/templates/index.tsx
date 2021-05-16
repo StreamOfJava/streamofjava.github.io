@@ -26,7 +26,7 @@ const IndexPage = ({ data }: IndexProperties) => {
 					schedule={readSchedule(data.streamers.nodes)}
 				/>
 			</div>
-			<div className={layout.sidebar}>
+			<div className={layout.streamers}>
 				<Streamers streamers={readStreamers(data.streamers.nodes)} />
 			</div>
 		</Layout>

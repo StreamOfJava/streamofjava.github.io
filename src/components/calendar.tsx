@@ -17,24 +17,29 @@ const Calendar = ({ timeZone, schedule }: CalendarProperties) => {
 	const firstDay: DateTime = today.startOf("month")
 	const daysInMonth: number = firstDay.daysInMonth
 	return (
-		<div
-			className={style.calendar}
-			style={{ gridTemplateAreas: gridStyle(firstDay, daysInMonth) }}
-		>
-			{arrayTo(daysInMonth)
-				.map(index => index + 1)
-				.map(dayOfMonth => {
-					const day: DateTime = firstDay.set({ day: dayOfMonth })
-					return (
-						<CalendarSheet
-							key={dayOfMonth}
-							day={day}
-							streams={schedule.streamsOn(day)}
-							gridArea={`d${dayOfMonth}`}
-						/>
-					)
-				})}
-		</div>
+		<>
+			<div className={style.month}>
+				<h2>May</h2>
+			</div>
+			<div
+				className={style.calendar}
+				style={{ gridTemplateAreas: gridStyle(firstDay, daysInMonth) }}
+			>
+				{arrayTo(daysInMonth)
+					.map(index => index + 1)
+					.map(dayOfMonth => {
+						const day: DateTime = firstDay.set({ day: dayOfMonth })
+						return (
+							<CalendarSheet
+								key={dayOfMonth}
+								day={day}
+								streams={schedule.streamsOn(day)}
+								gridArea={`d${dayOfMonth}`}
+							/>
+						)
+					})}
+			</div>
+		</>
 	)
 }
 

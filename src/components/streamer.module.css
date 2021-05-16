@@ -19,11 +19,8 @@
 	text-overflow: ellipsis;
 }
 
-.divider {
-	flex-grow: 1;
-}
-
 .channels {
+	margin-left: 0.5em;
 	flex-shrink: 0;
 
 	display: flex;

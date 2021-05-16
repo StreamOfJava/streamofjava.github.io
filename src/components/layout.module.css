@@ -1,9 +1,10 @@
 .main {
 	display: grid;
-	grid-template-columns: 1fr 2em auto 20em 2em 1fr;
+	grid-template-columns: 1fr 2em auto 2em 1fr;
 	grid-template-areas:
-		'. . header   header  . .'
-		'. . calendar sidebar . .'
+		'. . header    . .'
+		'. . streamers . .'
+		'. . calendar  . .'
 	;
 }
 
@@ -15,6 +16,6 @@
 	grid-area: calendar;
 }
 
-.sidebar {
-	grid-area: sidebar;
+.streamers {
+	grid-area: streamers;
 }
