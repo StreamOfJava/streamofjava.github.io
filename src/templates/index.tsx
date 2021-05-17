@@ -1,6 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
-import { DateTime, IANAZone, Zone } from "luxon"
+import { DateTime, Zone } from "luxon"
 
 import { Stream, Schedule, Location, Platform, Streamer } from "../types"
 import Layout from "../components/layout"
@@ -11,20 +10,20 @@ import Streamers from "../components/streamers"
 const layout = require("../components/layout.module.css")
 
 interface IndexProperties {
-	data: any
+	pageContext: any
 }
 
-const IndexPage = ({ data }: IndexProperties) => {
+const IndexPage = ({ pageContext }: IndexProperties) => {
 	return (
 		<Layout>
 			<div className={layout.header}>
 				<Header />
 			</div>
 			<div className={layout.calendar}>
-				<Calendar schedule={readSchedule(data.streamers.nodes)} />
+				<Calendar schedule={readSchedule(pageContext.streamers)} />
 			</div>
 			<div className={layout.streamers}>
-				<Streamers streamers={readStreamers(data.streamers.nodes)} />
+				<Streamers streamers={readStreamers(pageContext.streamers)} />
 			</div>
 		</Layout>
 	)
@@ -111,27 +110,3 @@ class ArraySchedule implements Schedule {
 }
 
 export default IndexPage
-
-// TODO using $beginningOfMonth leads to empty result even if there are streams in the future - weird
-export const query = graphql`
-	query StreamerQuery {
-		streamers: allStreamsJson {
-			nodes {
-				twitch_handle
-				name
-				schedule {
-					description
-					duration_in_minutes
-					title
-					stream_links {
-						platform
-						url
-					}
-					start_time
-				}
-				youtube_url
-				color
-			}
-		}
-	}
-`
