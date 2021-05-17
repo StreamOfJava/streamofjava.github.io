@@ -1,11 +1,9 @@
 body {
 	font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-	--bg-color: #0E0E10;
-	--bg-off-color: #333;
+	--bg-color: #0e0e0e;
 	--mid-color: #888;
-	--fg-color: #EFEFF1;
-	--fg-off-color: #CCC;
+	--fg-color: #efefef;
 
 	background-color: var(--bg-color);
 	color: var(--fg-color);

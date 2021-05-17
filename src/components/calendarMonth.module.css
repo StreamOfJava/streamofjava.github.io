@@ -18,9 +18,8 @@
 }
 
 .button:disabled {
-	color: var(--fg-off-color);
-	border-color: var(--fg-off-color);
-	border-style: dashed;
+	color: var(--mid-color);
+	border-color: var(--mid-color);
 }
 
 .button:not(:disabled):hover {
