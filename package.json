@@ -1,9 +1,9 @@
 {
-	"name": "gatsby-starter-default",
-	"private": true,
-	"description": "A simple starter to get up and developing quickly with Gatsby",
+	"name": "stream-of-java",
+	"private": false,
+	"description": "A simple website that shows when people live-stream Java coding",
 	"version": "0.1.0",
-	"author": "Kyle Mathews <mathews.kyle@gmail.com>",
+	"author": "Nicolai Parlog <nicolai@nipafx.dev>",
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.35",
 		"@fortawesome/free-brands-svg-icons": "^5.15.3",
@@ -39,13 +39,11 @@
 	],
 	"license": "0BSD",
 	"scripts": {
-		"build": "gatsby build",
-		"develop": "gatsby develop",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-		"start": "npm run develop",
-		"serve": "gatsby serve",
 		"clean": "gatsby clean",
-		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+		"develop": "gatsby develop",
+		"build": "gatsby build",
+		"serve": "gatsby serve"
 	},
 	"repository": {
 		"type": "git",
