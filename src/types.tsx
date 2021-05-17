@@ -1,6 +1,7 @@
 import { DateTime } from "luxon"
 
 export interface Schedule {
+	months(): number[]
 	streamsOn(day: DateTime): Stream[]
 }
 

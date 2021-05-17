@@ -92,14 +92,21 @@ const readLocation = (streamer: any, streamLink: any): Location => {
 }
 
 class ArraySchedule implements Schedule {
-	streams: Stream[]
+	_months: number[]
+	_streams: Stream[]
 
 	constructor(streams: Stream[]) {
-		this.streams = streams
+		this._streams = streams
+		const monthsWithDuplicates: number[] = streams.map(stream => stream.startTime.month)
+		this._months = [...new Set(monthsWithDuplicates)]
 	}
 
 	streamsOn(day: DateTime): Stream[] {
-		return this.streams.filter(stream => stream.startTime.hasSame(day, `day`))
+		return this._streams.filter(stream => stream.startTime.hasSame(day, `day`))
+	}
+
+	months(): number[] {
+		return this._months.slice()
 	}
 }
 

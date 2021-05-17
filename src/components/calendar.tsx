@@ -1,8 +1,10 @@
 import * as React from "react"
+import { useState } from "react"
 import { DateTime, IANAZone } from "luxon"
 
 import { Schedule } from "../types"
 import { arrayTo } from "./functions"
+import CalendarMonth from "./calendarMonth"
 import CalendarSheet from "./calendarSheet"
 
 const style = require("./calendar.module.css")
@@ -14,12 +16,14 @@ interface CalendarProperties {
 
 const Calendar = ({ timeZone, schedule }: CalendarProperties) => {
 	const today: DateTime = DateTime.now().setZone(timeZone)
-	const firstDay: DateTime = today.startOf("month")
+	const [month, setMonth] = useState(today.month)
+
+	const firstDay: DateTime = today.set({ month }).startOf("month")
 	const daysInMonth: number = firstDay.daysInMonth
 	return (
 		<>
 			<div className={style.month}>
-				<h2>May</h2>
+				<CalendarMonth month={month} months={schedule.months()} setMonth={setMonth} />
 			</div>
 			<div
 				className={style.calendar}
