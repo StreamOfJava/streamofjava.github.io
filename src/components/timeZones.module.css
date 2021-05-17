@@ -35,7 +35,8 @@
 	background-color: var(--bg-color);
 }
 
-.element, .current {
+.element,
+.current {
 	padding: 0.5em 0.5em 0.5em;
 
 	scroll-margin-top: 10em;
@@ -50,7 +51,8 @@
 	background-color: var(--bg-off-color);
 }
 
-.element:hover, .current:hover {
+.element:hover,
+.current:hover {
 	color: var(--bg-color);
 	background-color: var(--fg-color);
 }

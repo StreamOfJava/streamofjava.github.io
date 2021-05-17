@@ -14,7 +14,7 @@
 }
 
 .badge:hover {
-	color:  var(--color);
+	color: var(--color);
 	background-color: var(--bg-color);
 }
 

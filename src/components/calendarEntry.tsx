@@ -22,7 +22,7 @@ const CalendarEntry = ({ stream, timeZone }: EntryProperties) => {
 			<span className={style.locations}>
 				{stream.locations.map(location => (
 					<LocationView key={location.url.toString()} location={location} />
-					))}
+				))}
 			</span>
 			<span className={style.title}>{stream.title}</span>
 		</div>

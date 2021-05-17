@@ -7,8 +7,6 @@ interface LayoutProperties {
 	children: any
 }
 
-const Layout = ({ children }: LayoutProperties) => (
-	<main className={style.main}>{children}</main>
-)
+const Layout = ({ children }: LayoutProperties) => <main className={style.main}>{children}</main>
 
 export default Layout

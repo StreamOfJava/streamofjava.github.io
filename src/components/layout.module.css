@@ -2,10 +2,9 @@
 	display: grid;
 	grid-template-columns: 1fr 2em auto 2em 1fr;
 	grid-template-areas:
-		'. . header    . .'
-		'. . streamers . .'
-		'. . calendar  . .'
-	;
+		". . header    . ."
+		". . streamers . ."
+		". . calendar  . .";
 }
 
 .header {
