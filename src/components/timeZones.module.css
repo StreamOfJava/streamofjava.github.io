@@ -1,0 +1,61 @@
+.container {
+	position: relative;
+}
+
+.text {
+	color: var(--mid-color);
+}
+
+.change {
+	user-select: none;
+}
+.change:hover {
+	color: var(--fg-color);
+	cursor: pointer;
+}
+
+.changing {
+	color: var(--fg-color);
+	user-select: none;
+}
+.changing:hover {
+	color: var(--mid-color);
+	cursor: pointer;
+}
+
+.list {
+	position: absolute;
+	width: 100%;
+	height: 20em;
+
+	overflow-y: scroll;
+	scroll-margin-top: 10em;
+
+	border: 1px solid var(--fg-color);
+	background-color: var(--bg-color);
+}
+
+.element, .current {
+	padding: 0.5em 0.5em 0.5em;
+
+	scroll-margin-top: 10em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	cursor: pointer;
+}
+
+.current {
+	background-color: var(--bg-off-color);
+}
+
+.element:hover, .current:hover {
+	color: var(--bg-color);
+	background-color: var(--fg-color);
+}
+
+.divider:not(:last-child) {
+	margin: 0 0.5em;
+	border-bottom: 1px solid var(--fg-off-color);
+}

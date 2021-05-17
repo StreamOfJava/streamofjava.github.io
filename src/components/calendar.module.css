@@ -2,6 +2,12 @@
 	margin: 2em 0 1em;
 }
 
+.timeZone {
+	margin: 1em 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
 .calendar {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;

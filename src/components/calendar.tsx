@@ -6,15 +6,17 @@ import { Schedule } from "../types"
 import { arrayTo } from "./functions"
 import CalendarMonth from "./calendarMonth"
 import CalendarSheet from "./calendarSheet"
+import TimeZones from "./timeZones"
 
 const style = require("./calendar.module.css")
 
 interface CalendarProperties {
-	timeZone: IANAZone
 	schedule: Schedule
 }
 
-const Calendar = ({ timeZone, schedule }: CalendarProperties) => {
+const Calendar = ({ schedule }: CalendarProperties) => {
+	const [timeZone, setTimeZone] = useState(determineInitialTimeZone)
+
 	const today: DateTime = DateTime.now().setZone(timeZone)
 	const [month, setMonth] = useState(today.month)
 
@@ -24,6 +26,9 @@ const Calendar = ({ timeZone, schedule }: CalendarProperties) => {
 		<>
 			<div className={style.month}>
 				<CalendarMonth month={month} months={schedule.months()} setMonth={setMonth} />
+			</div>
+			<div className={style.timeZone}>
+				<TimeZones timeZone={timeZone} setTimeZone={setTimeZone} />
 			</div>
 			<div
 				className={style.calendar}
@@ -37,6 +42,7 @@ const Calendar = ({ timeZone, schedule }: CalendarProperties) => {
 							<CalendarSheet
 								key={dayOfMonth}
 								day={day}
+								timeZone={timeZone}
 								streams={schedule.streamsOn(day)}
 								gridArea={`d${dayOfMonth}`}
 							/>
@@ -45,6 +51,11 @@ const Calendar = ({ timeZone, schedule }: CalendarProperties) => {
 			</div>
 		</>
 	)
+}
+
+const determineInitialTimeZone = (): IANAZone => {
+	const identifier = Intl.DateTimeFormat().resolvedOptions().timeZone
+	return IANAZone.isValidZone(identifier) ? IANAZone.create(identifier) : IANAZone.create("UTC")
 }
 
 const gridStyle = (firstDay: DateTime, daysInMonth: number): string => {

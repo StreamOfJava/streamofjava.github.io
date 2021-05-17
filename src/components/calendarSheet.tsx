@@ -1,5 +1,5 @@
 import * as React from "react"
-import { DateTime } from "luxon"
+import { DateTime, IANAZone } from "luxon"
 
 import { ordinalDay } from "./functions"
 import { Stream } from "../types"
@@ -9,11 +9,12 @@ const style = require("./calendarSheet.module.css")
 
 interface SheetProperties {
 	day: DateTime
+	timeZone: IANAZone
 	streams: Stream[]
 	gridArea: string
 }
 
-const CalendarSheet = ({ day, streams, gridArea }: SheetProperties) => {
+const CalendarSheet = ({ day, timeZone, streams, gridArea }: SheetProperties) => {
 	return (
 		<div className={style.container} style={{ gridArea }}>
 			<div className={style.header}>
@@ -21,7 +22,13 @@ const CalendarSheet = ({ day, streams, gridArea }: SheetProperties) => {
 				<span className={style.day}>{ordinalDay(day.day)}</span>
 			</div>
 			<div className={style.body}>
-				{streams.map(stream => <CalendarEntry key={stream.startTime.toISO()} stream={stream} />)}
+				{streams.map(stream => (
+					<CalendarEntry
+						key={stream.startTime.toISO()}
+						stream={stream}
+						timeZone={timeZone}
+					/>
+				))}
 			</div>
 		</div>
 	)

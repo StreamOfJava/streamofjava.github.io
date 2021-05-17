@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { DateTime, IANAZone } from "luxon"
+import { DateTime, IANAZone, Zone } from "luxon"
 
 import { Stream, Schedule, Location, Platform, Streamer } from "../types"
 import Layout from "../components/layout"
@@ -21,10 +21,7 @@ const IndexPage = ({ data }: IndexProperties) => {
 				<Header />
 			</div>
 			<div className={layout.calendar}>
-				<Calendar
-					timeZone={IANAZone.create("UTC")}
-					schedule={readSchedule(data.streamers.nodes)}
-				/>
+				<Calendar schedule={readSchedule(data.streamers.nodes)} />
 			</div>
 			<div className={layout.streamers}>
 				<Streamers streamers={readStreamers(data.streamers.nodes)} />
@@ -70,7 +67,7 @@ const readSchedule = (streamers: any): Schedule => {
 
 const readStream = (streamer: any, stream: any): Stream => ({
 	title: stream.title,
-	startTime: DateTime.fromISO(stream.start_time),
+	startTime: DateTime.fromISO(stream.start_time).toUTC(),
 	locations: stream.stream_links.map((streamLink: any) => readLocation(streamer, streamLink)),
 	color: streamer.color,
 })
@@ -102,7 +99,10 @@ class ArraySchedule implements Schedule {
 	}
 
 	streamsOn(day: DateTime): Stream[] {
-		return this._streams.filter(stream => stream.startTime.hasSame(day, `day`))
+		const timeZone: Zone = day.zone
+		return this._streams.filter(stream =>
+			stream.startTime.setZone(timeZone).hasSame(day, `day`)
+		)
 	}
 
 	months(): number[] {
