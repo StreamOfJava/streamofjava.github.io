@@ -28,9 +28,29 @@
 	background-color: var(--fg-color);
 }
 
-.month {
-	margin: 0 0.5em;
-	/* set a min width that accomodates "November", so buttons stay in the same place */
-	min-width: 6em;
+.shortMonth {
+	margin: 0;
+	/* set a min width, so buttons stay in the same place */
+	min-width: 3em;
 	text-align: center;
+}
+
+.longMonth {
+	display: none;
+}
+
+@media all and (min-width: 600px) {
+	.shortMonth {
+		display: none;
+	}
+
+	.longMonth {
+		display: block;
+
+		margin: 0;
+		/* set a min width that accomodates "September", so buttons stay in the same place */
+		min-width: 7em;
+		text-align: center;
+	}
+
 }

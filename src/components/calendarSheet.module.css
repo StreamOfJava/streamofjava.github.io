@@ -4,6 +4,10 @@
 	justify-items: stretch;
 }
 
+.container.empty {
+	display: none;
+}
+
 .header {
 	padding: 0.25em 0.5em;
 
@@ -20,7 +24,14 @@
 
 .body {
 	flex-grow: 1;
+	min-height: 2em;
 
 	border: 1px solid var(--fg-color);
 	border-bottom-right-radius: var(--border-radius);
+}
+
+@media all and (min-width: 500px) {
+	.container.empty {
+		display: flex;
+	}
 }

@@ -21,7 +21,8 @@ const CalendarMonth = ({ month, months, setMonth }: CalendarMonthProperties) => 
 			>
 				&lt;
 			</button>
-			<h2 className={style.month}>{Info.months()[month - 1]}</h2>
+			<h2 className={style.shortMonth}>{Info.monthsFormat("short")[month - 1]}</h2>
+			<h2 className={style.longMonth}>{Info.months()[month - 1]}</h2>
 			<button
 				className={style.button}
 				disabled={lastMonth}

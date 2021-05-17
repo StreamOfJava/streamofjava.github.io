@@ -15,8 +15,10 @@ interface SheetProperties {
 }
 
 const CalendarSheet = ({ day, timeZone, streams, gridArea }: SheetProperties) => {
+	const classes: string[] = [style.container]
+	if (streams.length === 0) classes.push(style.empty)
 	return (
-		<div className={style.container} style={{ gridArea }}>
+		<div className={classes.join(` `)} style={{ gridArea }}>
 			<div className={style.header}>
 				<span className={style.weekday}>{day.toFormat("EEE")}</span>
 				<span className={style.day}>{ordinalDay(day.day)}</span>

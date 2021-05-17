@@ -22,6 +22,9 @@ const Calendar = ({ schedule }: CalendarProperties) => {
 
 	const firstDay: DateTime = today.set({ month }).startOf("month")
 	const daysInMonth: number = firstDay.daysInMonth
+
+	const calendarClasses: string[] = [style.calendar]
+	calendarClasses.push(style[`${firstDay.toFormat(`EEEE`).toLowerCase()}1st`])
 	return (
 		<>
 			<div className={style.month}>
@@ -30,10 +33,7 @@ const Calendar = ({ schedule }: CalendarProperties) => {
 			<div className={style.timeZone}>
 				<TimeZones timeZone={timeZone} setTimeZone={setTimeZone} />
 			</div>
-			<div
-				className={style.calendar}
-				style={{ gridTemplateAreas: gridStyle(firstDay, daysInMonth) }}
-			>
+			<div className={calendarClasses.join(` `)}>
 				{arrayTo(daysInMonth)
 					.map(index => index + 1)
 					.map(dayOfMonth => {
@@ -56,20 +56,6 @@ const Calendar = ({ schedule }: CalendarProperties) => {
 const determineInitialTimeZone = (): IANAZone => {
 	const identifier = Intl.DateTimeFormat().resolvedOptions().timeZone
 	return IANAZone.isValidZone(identifier) ? IANAZone.create(identifier) : IANAZone.create("UTC")
-}
-
-const gridStyle = (firstDay: DateTime, daysInMonth: number): string => {
-	const offsetInDays = firstDay.weekday - 1
-	const numberOfWeeks = Math.ceil((daysInMonth + offsetInDays) / 7)
-
-	const weeks: string[] = arrayTo(numberOfWeeks).map(week =>
-		arrayTo(7)
-			.map(dayOfWeek => week * 7 + dayOfWeek)
-			.map(index => index - offsetInDays + 1)
-			.map(day => (1 <= day && day <= daysInMonth ? `d${day}` : `.`))
-			.join(` `)
-	)
-	return `'${weeks.join(`' '`)}'`
 }
 
 export default Calendar

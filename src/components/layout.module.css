@@ -1,10 +1,12 @@
 .main {
 	display: grid;
-	grid-template-columns: 1fr 2em auto 2em 1fr;
+	grid-template-columns: 25px 1fr 25px;
 	grid-template-areas:
-		". . header    . ."
-		". . streamers . ."
-		". . calendar  . .";
+		". header    ."
+		". streamers ."
+		". calendar  .";
+
+	min-width: 300px;
 }
 
 .header {
@@ -17,4 +19,16 @@
 
 .streamers {
 	grid-area: streamers;
+}
+
+@media all and (min-width: 600px) {
+	.main {
+		grid-template-columns: 50px 1fr 50px;
+	}
+}
+
+@media all and (min-width: 2500px) {
+	.main {
+		grid-template-columns: 1fr 2400px 1fr;
+	}
 }

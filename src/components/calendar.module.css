@@ -9,8 +9,343 @@
 }
 
 .calendar {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-auto-rows: 1fr;
-	grid-gap: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+@media all and (min-width: 500px) {
+	.calendar {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: 1fr;
+		grid-gap: 1fr;
+	}
+
+	.monday1st {
+		grid-template-areas:
+			" d1  d2"
+			" d3  d4"
+			" d5  d6"
+			"  .  d7"
+			" d8  d9"
+			"d10 d11"
+			"d12 d13"
+			"  . d14"
+			"d15 d16"
+			"d17 d18"
+			"d19 d20"
+			"  . d21"
+			"d22 d23"
+			"d24 d25"
+			"d26 d27"
+			"  . d28"
+			"d29 d30"
+			"d31   .";
+	}
+
+	.tuesday1st {
+		grid-template-areas:
+			"  .  d1"
+			" d2  d3"
+			" d4  d5"
+			"  .  d6"
+			" d7  d8"
+			" d9 d10"
+			"d11 d12"
+			"  . d13"
+			"d14 d15"
+			"d16 d17"
+			"d18 d19"
+			"  . d20"
+			"d21 d22"
+			"d23 d24"
+			"d25 d26"
+			"  . d27"
+			"d28 d29"
+			"d30 d31";
+	}
+
+	.wednesday1st {
+		grid-template-areas:
+			" d1  d2"
+			" d3  d4"
+			"  .  d5"
+			" d6  d7"
+			" d8  d9"
+			"d10 d11"
+			"  . d12"
+			"d13 d14"
+			"d15 d16"
+			"d17 d18"
+			"  . d19"
+			"d20 d21"
+			"d22 d23"
+			"d24 d25"
+			"  . d26"
+			"d27 d28"
+			"d29 d30"
+			"d31   .";
+	}
+
+	.thursday1st {
+		grid-template-areas:
+			"  .  d1"
+			" d2  d3"
+			"  .  d4"
+			" d5  d6"
+			" d7  d8"
+			" d9 d10"
+			"  . d11"
+			"d12 d13"
+			"d14 d15"
+			"d16 d17"
+			"  . d18"
+			"d19 d20"
+			"d21 d22"
+			"d23 d24"
+			"  . d25"
+			"d26 d27"
+			"d28 d29"
+			"d30 d31";
+	}
+
+	.friday1st {
+		grid-template-areas:
+			" d1  d2"
+			"  .  d3"
+			" d4  d5"
+			" d6  d7"
+			" d8  d9"
+			"  . d10"
+			"d11 d12"
+			"d13 d14"
+			"d15 d16"
+			"  . d17"
+			"d18 d19"
+			"d20 d21"
+			"d22 d23"
+			"  . d24"
+			"d25 d26"
+			"d27 d28"
+			"d29 d30"
+			"  . d31";
+	}
+
+	.saturday1st {
+		grid-template-areas:
+			"  .  d1"
+			"  .  d2"
+			" d3  d4"
+			" d5  d6"
+			" d7  d8"
+			"  .  d9"
+			"d10 d11"
+			"d12 d13"
+			"d14 d15"
+			"  . d16"
+			"d17 d18"
+			"d19 d20"
+			"d21 d22"
+			"  . d23"
+			"d24 d25"
+			"d26 d27"
+			"d28 d29"
+			"  . d30"
+			"d31   .";
+	}
+
+	.sunday1st {
+		grid-template-areas:
+			"  .  d1"
+			" d2  d3"
+			" d4  d5"
+			" d6  d7"
+			"  .  d8"
+			" d9 d10"
+			"d11 d12"
+			"d13 d14"
+			"  . d15"
+			"d16 d17"
+			"d18 d19"
+			"d20 d21"
+			"  . d22"
+			"d23 d24"
+			"d25 d26"
+			"d27 d28"
+			"  . d29"
+			"d30 d31";
+	}
+}
+
+@media all and (min-width: 800px) {
+	.calendar {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.monday1st {
+		grid-template-areas:
+			" d1  d2  d3  d4"
+			"  .  d5  d6  d7"
+			" d8  d9 d10 d11"
+			"  . d12 d13 d14"
+			"d15 d16 d17 d18"
+			"  . d19 d20 d21"
+			"d22 d23 d24 d25"
+			"  . d26 d27 d28"
+			"d29 d30 d31   .";
+	}
+
+	.tuesday1st {
+		grid-template-areas:
+			"  .  d1  d2  d3"
+			"  .  d4  d5  d6"
+			" d7  d8  d9 d10"
+			"  . d11 d12 d13"
+			"d14 d15 d16 d17"
+			"  . d18 d19 d20"
+			"d21 d22 d23 d24"
+			"  . d25 d26 d27"
+			"d28 d29 d30 d31";
+	}
+
+	.wednesday1st {
+		grid-template-areas:
+			"  .   .  d1  d2"
+			"  .  d3  d4  d5"
+			" d6  d7  d8  d9"
+			"  . d10 d11 d12"
+			"d13 d14 d15 d16"
+			"  . d17 d18 d19"
+			"d20 d21 d22 d23"
+			"  . d24 d25 d26"
+			"d27 d28 d29 d30"
+			"  . d31   .   .";
+	}
+
+	.thursday1st {
+		grid-template-areas:
+			"  .   .   .  d1"
+			"  .  d2  d3  d4"
+			" d5  d6  d7  d8"
+			"  .  d9 d10 d11"
+			"d12 d13 d14 d15"
+			"  . d16 d17 d18"
+			"d19 d20 d21 d22"
+			"  . d23 d24 d25"
+			"d26 d27 d28 d29"
+			"  . d30 d31   .";
+	}
+
+	.friday1st {
+		grid-template-areas:
+			"  .  d1  d2  d3"
+			" d4  d5  d6  d7"
+			"  .  d8  d9 d10"
+			"d11 d12 d13 d14"
+			"  . d15 d16 d17"
+			"d18 d19 d20 d21"
+			"  . d22 d23 d24"
+			"d25 d26 d27 d28"
+			"  . d29 d30 d31";
+	}
+
+	.saturday1st {
+		grid-template-areas:
+			"  .   .  d1  d2"
+			" d3  d4  d5  d6"
+			"  .  d7  d8  d9"
+			"d10 d11 d12 d13"
+			"  . d14 d15 d16"
+			"d17 d18 d19 d20"
+			"  . d21 d22 d23"
+			"d24 d25 d26 d27"
+			"  . d28 d29 d30"
+			"d31   .   .   .";
+	}
+
+	.sunday1st {
+		grid-template-areas:
+			"  .   .   .  d1"
+			" d2  d3  d4  d5"
+			"  .  d6  d7  d8"
+			" d9 d10 d11 d12"
+			"  . d13 d14 d15"
+			"d16 d17 d18 d19"
+			"  . d20 d21 d22"
+			"d23 d24 d25 d26"
+			"  . d27 d28 d29"
+			"d30 d31   .   .";
+	}
+}
+
+@media all and (min-width: 1400px) {
+	.calendar {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.monday1st {
+		grid-template-areas:
+			" d1  d2  d3  d4  d5  d6  d7"
+			" d8  d9 d10 d11 d12 d13 d14"
+			"d15 d16 d17 d18 d19 d20 d21"
+			"d22 d23 d24 d25 d26 d27 d28"
+			"d29 d30 d31   .   .   .   .";
+	}
+
+	.tuesday1st {
+		grid-template-areas:
+			"  .  d1  d2  d3  d4  d5  d6"
+			" d7  d8  d9 d10 d11 d12 d13"
+			"d14 d15 d16 d17 d18 d19 d20"
+			"d21 d22 d23 d24 d25 d26 d27"
+			"d28 d29 d30 d31   .   .   .";
+	}
+
+	.wednesday1st {
+		grid-template-areas:
+			"  .   .  d1  d2  d3  d4  d5"
+			" d6  d7  d8  d9 d10 d11 d12"
+			"d13 d14 d15 d16 d17 d18 d19"
+			"d20 d21 d22 d23 d24 d25 d26"
+			"d27 d28 d29 d30 d31   .   .";
+	}
+
+	.thursday1st {
+		grid-template-areas:
+			"  .   .   .  d1  d2  d3  d4"
+			" d5  d6  d7  d8  d9 d10 d11"
+			"d12 d13 d14 d15 d16 d17 d18"
+			"d19 d20 d21 d22 d23 d24 d25"
+			"d26 d27 d28 d29 d30 d31   .";
+	}
+
+	.friday1st {
+		grid-template-areas:
+			"  .   .   .   .  d1  d2  d3"
+			" d4  d5  d6  d7  d8  d9 d10"
+			"d11 d12 d13 d14 d15 d16 d17"
+			"d18 d19 d20 d21 d22 d23 d24"
+			"d25 d26 d27 d28 d29 d30 d31";
+	}
+
+	.saturday1st {
+		grid-template-areas:
+			"  .   .   .   .   .  d1  d2"
+			" d3  d4  d5  d6  d7  d8  d9"
+			"d10 d11 d12 d13 d14 d15 d16"
+			"d17 d18 d19 d20 d21 d22 d23"
+			"d24 d25 d26 d27 d28 d29 d30"
+			"d31   .   .   .   .   .   .";
+	}
+
+	.sunday1st {
+		grid-template-areas:
+			"  .   .   .   .   .   .  d1"
+			" d2  d3  d4  d5  d6  d7  d8"
+			" d9 d10 d11 d12 d13 d14 d15"
+			"d16 d17 d18 d19 d20 d21 d22"
+			"d23 d24 d25 d26 d27 d28 d29"
+			"d30 d31   .   .   .   .   .";
+	}
 }
