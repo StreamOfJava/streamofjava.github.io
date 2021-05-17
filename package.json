@@ -32,6 +32,7 @@
 		"react-helmet": "^6.1.0"
 	},
 	"devDependencies": {
+		"ajv": "^6.12.6",
 		"prettier": "2.2.1"
 	},
 	"keywords": [
@@ -39,6 +40,7 @@
 	],
 	"license": "0BSD",
 	"scripts": {
+		"validate": "node validate-streams.js",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
 		"clean": "gatsby clean",
 		"develop": "gatsby develop",

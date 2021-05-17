@@ -1,12 +1,6 @@
-name: Site Deploy
+name: Stream schedule validation
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   # deploy every midnight
-#   schedule:
-#     - cron: '0 0 * * *'
+on: [push, pull_request]
 
 jobs:
   build-deploy:
@@ -31,12 +25,3 @@ jobs:
         run: npm --legacy-peer-deps install
       - name: validate schema
         run: npm run validate
-      - name: build with Gatsby
-        run: npx gatsby build
-      - name: Deploy to GH Pages
-        if: github.repository == 'StreamOfJava/streamofjava.github.io'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./public
