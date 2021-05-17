@@ -1,12 +1,12 @@
 name: Site Deploy
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   # deploy every midnight
-#   schedule:
-#     - cron: '0 0 * * *'
+on:
+  push:
+    branches:
+      - main
+  # deploy every midnight
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build-deploy:
