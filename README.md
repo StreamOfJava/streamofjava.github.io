@@ -1,17 +1,5 @@
-## Welcome to Stream&lt;Java&gt;
-  
-### What is this?
+# Stream&lt;Java&gt;
 
-It's a landing page for those of us who stream Java on Twitch and YouTube.
+There are a number of people out there live-streaming their Javawork with Java (or other JVM-based languages) but it's not easy to find them.
+This repo spawns a website that shows a calendar of `Stream<Java>` (get it, "streams of Java"? :D ) at [streamofjava.tv](https://streamofjava.tv/).
 
-### Who's that?
-
-  - Ted M. Young (JitterTed): [Twitch](https://www.twitch.tv/jitterted) - [YouTube](https://www.youtube.com/jitterted/) - [Twitter](https://twitter.com/jitterted)
-  - Nicolai Parlog (nipafx): [Twitch](https://www.twitch.tv/nipafx) - [Twitter](https://twitter.com/nipafx)
-  - Kevin Wittek (Kiview): [Twitch](https://www.twitch.tv/kiview) - [Twitter](https://twitter.com/kiview)
-  - Matthew Gilliard: [Twitch](https://www.twitch.tv/MaximumGilliard) - [Twitter](https://twitter.com/MaximumGilliard)
-  - Tim Zöller: [Twitch](https://www.twitch.tv/JavaHippie) - [Twitter](https://twitter.com/JavaHippie)
-
-### What's going on?
-
-We'll put details of upcoming streams and events here once we've automated it.
