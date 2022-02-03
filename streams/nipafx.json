@@ -15,7 +15,7 @@
 			]
 		},
 		{
-			"start_time": "2021-05-18T17:00:00Z",
+			"start_time": "2022-02-03T17:00:00Z",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions",
 			"stream_links": [
@@ -23,39 +23,32 @@
 					"platform": "twitch"
 				}
 			]
+
 		},
 		{
-			"start_time": "2021-05-25T17:00:00Z",
-			"title": "Extending ModiTect // Gunnar Morling",
-			"description": "We'll continue our efforts to teach Moditect the creation of application class-path images",
+			"start_time": "2022-02-05T11:00:00Z",
+			"title": "Java Ecosystem Map",
+			"description": "Trying to present a nice, snappy, interactive graph that visualizes the Java ecosystem",
 			"stream_links": [
 				{
 					"platform": "twitch"
 				}
 			]
+
 		},
 		{
-			"start_time": "2021-05-29T07:00:00Z",
-			"title": "Hack.Commit.Push",
-			"description": "Helping you help us. Join [Hack.Commit.Push](https://paris2021.hack-commit-pu.sh/) if you want to hack on JUnit Pioneer and we'll support you all the way from learning about Jupiter's extension API to merging your PR.<br/>I'll live-stream on Twitch.",
+			"start_time": "2022-02-10T17:00:00Z",
+			"title": "NIO Hands on Guide // Elliot Barlas",
+			"description": "Direct NIO is very performant, but not exactly easy to use - Elliot is here to get us started by live-coding a client and server.",
 			"stream_links": [
 				{
 					"platform": "twitch"
 				}
 			]
+
 		},
 		{
-			"start_time": "2021-06-01T17:00:00Z",
-			"title": "JUnit Pioneer - Annotation War",
-			"description": "Large team stream, trying to figure out how to best scan extension that relate to Before/AfterAll extensions",
-			"stream_links": [
-				{
-					"platform": "twitch"
-				}
-			]
-		},
-		{
-			"start_time": "2021-06-15T17:00:00Z",
+			"start_time": "2022-02-17T17:00:00Z",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions",
 			"stream_links": [
@@ -63,26 +56,18 @@
 					"platform": "twitch"
 				}
 			]
+
 		},
 		{
-			"start_time": "2021-06-22T17:00:00Z",
-			"title": "T.B.D.",
-			"description": "Not sure whether I'll be able to stream that day, so I'll leave this here as a placeholder",
+			"start_time": "2022-02-24T17:00:00Z",
+			"title": "Project Valhalla // Gunnar Morling",
+			"description": "Gunnar and I explore Project Valhalla, going over its proposals and experimenting with its early-access build.",
 			"stream_links": [
 				{
 					"platform": "twitch"
 				}
 			]
-		},
-		{
-			"start_time": "2021-06-29T17:00:00Z",
-			"title": "Gunnar Morling",
-			"description": "We had so much fun with Moditect, we're gonna keep streaming together",
-			"stream_links": [
-				{
-					"platform": "twitch"
-				}
-			]
+
 		}
 	]
 }
