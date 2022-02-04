@@ -5,7 +5,7 @@
 	"youtube_url": "https://www.youtube.com/channel/UCngKKOnBxYtLAV8pgUBNDng",
 	"schedule": [
 		{
-			"start_time": "2021-05-04T17:00:00Z",
+			"start_time": "2021-05-04T18:00:00Z",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions",
 			"stream_links": [
@@ -15,7 +15,7 @@
 			]
 		},
 		{
-			"start_time": "2022-02-03T17:00:00Z",
+			"start_time": "2022-02-03T18:00:00Z",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions",
 			"stream_links": [
@@ -26,7 +26,7 @@
 
 		},
 		{
-			"start_time": "2022-02-05T11:00:00Z",
+			"start_time": "2022-02-05T12:00:00Z",
 			"title": "Java Ecosystem Map",
 			"description": "Trying to present a nice, snappy, interactive graph that visualizes the Java ecosystem",
 			"stream_links": [
@@ -37,7 +37,7 @@
 
 		},
 		{
-			"start_time": "2022-02-10T17:00:00Z",
+			"start_time": "2022-02-10T18:00:00Z",
 			"title": "NIO Hands on Guide // Elliot Barlas",
 			"description": "Direct NIO is very performant, but not exactly easy to use - Elliot is here to get us started by live-coding a client and server.",
 			"stream_links": [
@@ -48,7 +48,7 @@
 
 		},
 		{
-			"start_time": "2022-02-17T17:00:00Z",
+			"start_time": "2022-02-17T18:00:00Z",
 			"title": "JUnit Pioneer",
 			"description": "Working on PRs, issues, and maybe new extensions",
 			"stream_links": [
@@ -59,7 +59,7 @@
 
 		},
 		{
-			"start_time": "2022-02-24T17:00:00Z",
+			"start_time": "2022-02-24T18:00:00Z",
 			"title": "Project Valhalla // Gunnar Morling",
 			"description": "Gunnar and I explore Project Valhalla, going over its proposals and experimenting with its early-access build.",
 			"stream_links": [
